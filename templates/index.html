@@ -1,0 +1,19 @@
+<link rel="stylesheet" type="text/css" href="/statics/styles.css">
+<form action="/validate" method=POST>
+    {% if msg1 %}
+      <h3 class="h3">{{msg1}}</h3>
+    {% endif %}
+    <div class="login-wrap">
+        <h2>Login</h2>
+        <div class="form">
+          <input type="text" placeholder="Username" id='un' name="un" />
+          <input type="password" placeholder="Password" id='pw' name="pw" />
+          <button type="Submit"> Sign in </button>
+          <a href="/login"> <p> Don't have an account? Register </p></a>
+          {% if msg %}
+            <h3 class="error3">{{msg}}</h3>
+          {% endif %}
+    
+        </div>
+      </div>
+</form>
